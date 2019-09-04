@@ -5,21 +5,6 @@ import numpy as np
 import random
 import torch
 
-# 
-# class ReplayBuffer:
-# 
-#     def __init__(self, buffer_size):
-#         self._buffer = deque(maxlen=buffer_size)
-#     
-#     def __len__(self):
-#         return len(self._buffer)
-# 
-#     def push(self, e):
-#         self._buffer.append(e)
-# 
-#     def sample(self, batch_size):
-#         return random.sample(self._buffer, k=batch_size) 
-
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class ReplayBuffer:
